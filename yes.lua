@@ -5519,3 +5519,15 @@ function UILibrary.Section:Dropdown(sett, callback)
 end
 
 return UILibrary
+
+local Window = UILibrary.new("Grand Piece Online", game.Players.LocalPlayer.UserId, "Buyer")
+local Category1 = Window:Category("Main", "http://www.roblox.com/asset/?id=8395621517")
+local SubButton1 = Category1:Button("Combat", "http://www.roblox.com/asset/?id=8395747586")
+local Section1 = SubButton1:Section("Section", "Left")
+Section1:Button({
+    Title = "Kill All",
+    ButtonName = "KILL!!",
+    Description = "kills everyone",
+    }, function(value)
+    print(value)
+end)
